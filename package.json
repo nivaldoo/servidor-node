@@ -1,0 +1,45 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "API MM Integração",
+  "author": "Topos Inf",
+  "license": "ISC",
+  "scripts": {
+    "dev": "nodemon src/app",
+    "eslint": "./node_modules/.bin/eslint .",
+    "git-config": "git config core.autocrlf input",
+    "init-migrations": "sequelize init --options-path=.sequelizerc",
+    "dev-migrations": "sequelize db:migrate --env dev --options-path=.sequelizerc",
+    "dev-migrations-undo": "sequelize db:migrate:undo --env dev --options-path=.sequelizerc --name nameMigration",
+    "sandbox-migrations": "sequelize db:migrate --env sandbox --options-path=.sequelizerc",
+    "sandbox-migrations-undo": "sequelize db:migrate:undo --env sandbox --options-path=.sequelizerc --name ",
+    "production-migrations": "sequelize db:migrate --env production --options-path=.sequelizerc",
+    "production-migrations-undo": "sequelize db:migrate:undo --env production --options-path=.sequelizerc",
+    "migration": "node_modules/.bin/sequelize migration:create --env development --name feature",
+    "migrate": "node_modules/.bin/sequelize db:migrate --env development --options-path=.sequelizerc",
+    "undo-migrate": "node_modules/.bin/sequelize db:migrate:undo --env development --options-path=.sequelizerc --name {script-name}"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "dotenv": "^7.0.0",
+    "excel4node": "^1.7.2",
+    "express": "^4.16.3",
+    "express-generator": "^4.16.1",
+    "fs-extra": "^8.1.0",
+    "helmet": "^3.12.0",
+    "html-pdf-node": "^1.0.7",
+    "moment": "^2.24.0",
+    "multer": "^1.4.3",
+    "mysql2": "^1.7.0",
+    "pdfkit": "^0.12.1",
+    "sequelize": "^4.44.0",
+    "sequelize-cli": "^6.2.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0"
+  }
+}
