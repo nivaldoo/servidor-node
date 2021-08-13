@@ -1,6 +1,6 @@
 # servidor-node
 
-git clone https://github.com/nivaldoo/servidor-node.git 
-code ./servidor-node/ -r
-npm i
-npm run dev
+git clone https://github.com/nivaldoo/servidor-node.git \n
+code ./servidor-node/ -r \n
+npm i \n
+npm run dev \n
